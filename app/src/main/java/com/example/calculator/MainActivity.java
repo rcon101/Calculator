@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         btnDivide = findViewById(R.id.btnDivide);
         resultView = findViewById(R.id.resultView);
 
-        btnAdd.setOnClickListener(view -> calculate('+', view));
-        btnSubtract.setOnClickListener(view -> calculate('-', view));
-        btnMultiply.setOnClickListener(view -> calculate('*', view));
-        btnDivide.setOnClickListener(view -> calculate('/', view));
+        btnAdd.setOnClickListener(view -> calculate('+'));
+        btnSubtract.setOnClickListener(view -> calculate('-'));
+        btnMultiply.setOnClickListener(view -> calculate('*'));
+        btnDivide.setOnClickListener(view -> calculate('/'));
     }
 
-    private void calculate(char operator, View view){
+    private void calculate(char operator){
         String input1 = number1.getText().toString();
         String input2 = number2.getText().toString();
         if (input1.isEmpty() || input2.isEmpty()) {
